@@ -177,8 +177,8 @@ def init_db():
             db.create_all()
             if not Admin.query.first():
                 default_admin = Admin(
-                    username='admin',
-                    password_hash=generate_password_hash('admin123')
+                    username='sharifcenter2026',
+                    password_hash=generate_password_hash('shafaqshahid123')
                 )
                 db.session.add(default_admin)
                 db.session.commit()
@@ -443,7 +443,7 @@ a{text-decoration:none;color:inherit;cursor:pointer}
 <div class="form-group"><label>Password</label><input type="password" id="login-pass" required placeholder="Enter password"></div>
 <button type="submit" class="btn btn-primary" style="width:100%;" id="loginBtn">Login</button>
 </form>
-<div class="login-hint"><strong>Default credentials:</strong><br>Username: <strong>admin</strong> | Password: <strong>admin123</strong></div>
+<div class="login-hint"><strong>🔒 Secure Admin Access</strong><br>Authorized personnel only</div>
 <div style="text-align:center;margin-top:20px;"><a onclick="showPage('home')" style="color:var(--primary);font-size:.9rem;">← Back to Website</a></div>
 </div></div></div>
 <div class="page" id="admin-dashboard-page">
