@@ -35,7 +35,7 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'sharif-medical-secret-change
 # Falls back to SQLite for local development
 # DATABASE: PostgreSQL (Supabase) - Hardcoded for reliability
 # This connection string connects to Supabase database
-HARDCODED_DB_URL = "postgresql://postgres.xzxysfwhgaycsymmktrm:SharifMedical2026@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres"
+HARDCODED_DB_URL = "postgresql://postgres:SharifMedical2026@db.xzxysfwhgaycsymmktrm.supabase.co:5432/postgres"
 
 DATABASE_URL = os.getenv('DATABASE_URL', '').strip() or HARDCODED_DB_URL
 if DATABASE_URL:
