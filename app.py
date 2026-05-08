@@ -33,7 +33,11 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'sharif-medical-secret-change
 
 # DATABASE: PostgreSQL (Supabase) for permanent data
 # Falls back to SQLite for local development
-DATABASE_URL = os.getenv('DATABASE_URL', '').strip()
+# DATABASE: PostgreSQL (Supabase) - Hardcoded for reliability
+# This connection string connects to Supabase database
+HARDCODED_DB_URL = "postgresql://postgres.xzxysfwhgaycsymmktrm:SharifMedical2026@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres"
+
+DATABASE_URL = os.getenv('DATABASE_URL', '').strip() or HARDCODED_DB_URL
 if DATABASE_URL:
     # Fix for SQLAlchemy postgres:// → postgresql://
     if DATABASE_URL.startswith('postgres://'):
@@ -428,7 +432,7 @@ a{text-decoration:none;color:inherit;cursor:pointer}
 <div class="form-group"><label>Phone *</label><input type="tel" id="ap-phone" required></div>
 <div class="form-group"><label>Select Doctor</label><select id="ap-doctor"><option>Dr. Shaheena Shafaq (General Physician)</option><option>Dr. Ishfaq Ahmed Cheema (Endoscopy Specialist)</option></select></div>
 <div class="form-group"><label>Preferred Date</label><input type="date" id="ap-date"></div>
-<div class="form-group"><label>Message</label><textarea id="ap-message" placeholder="Describe your problem..."></textarea></div>
+<div class="form-group"><label>Message <span style="color:#999;font-weight:normal;">(Optional)</span></label><textarea id="ap-message" placeholder="Describe your problem... (skip if not needed)"></textarea></div>
 <button type="submit" class="btn btn-primary" style="width:100%;" id="submitBtn">Submit Request</button>
 </form></div></div></section>
 <section class="map-section"><div class="section-header"><h2>Find <span>Us</span></h2></div>
@@ -477,7 +481,7 @@ a{text-decoration:none;color:inherit;cursor:pointer}
 <input type="tel" id="new-phone" placeholder="Phone Number *">
 <select id="new-doctor"><option>Dr. Shaheena Shafaq (General Physician)</option><option>Dr. Ishfaq Ahmed Cheema (Endoscopy Specialist)</option></select>
 <input type="date" id="new-date">
-<textarea class="full" id="new-message" placeholder="Notes / Problem description..."></textarea>
+<textarea class="full" id="new-message" placeholder="Notes / Problem description... (Optional - skip if not needed)"></textarea>
 </div><button class="btn btn-primary" onclick="addNewAppointment()">+ Add Appointment</button></div>
 </div>
 <div id="tab-patients" class="admin-tab" style="display:none;">
