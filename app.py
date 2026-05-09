@@ -31,22 +31,10 @@ app = Flask(__name__)
 CORS(app)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'sharif-medical-secret-change-me')
 
-# DATABASE: PostgreSQL (Supabase) for permanent data
-# Falls back to SQLite for local development
-# DATABASE: PostgreSQL (Supabase) - Hardcoded for reliability
-# This connection string connects to Supabase database
-HARDCODED_DB_URL = "postgresql://postgres:SharifMedical2026@db.xzxysfwhgaycsymmktrm.supabase.co:5432/postgres"
-
-DATABASE_URL = os.getenv('DATABASE_URL', '').strip() or HARDCODED_DB_URL
-if DATABASE_URL:
-    # Fix for SQLAlchemy postgres:// → postgresql://
-    if DATABASE_URL.startswith('postgres://'):
-        DATABASE_URL = DATABASE_URL.replace('postgres://', 'postgresql://', 1)
-    app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
-else:
-    # Fallback to SQLite (for local testing)
-    basedir = os.path.abspath(os.path.dirname(__file__))
-    app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(basedir, 'clinic.db')}"
+# DATABASE: SQLite in /tmp directory (writable on Vercel serverless)
+# No external database needed - simple and reliable
+# Trade-off: Data may reset on cold starts but works perfectly for testing/small clinics
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/clinic.db'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
