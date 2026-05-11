@@ -641,7 +641,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.5L4 16l4 4 4-4 4 4 4-4-6-6.5V2"/></svg></div><h3>Endoscopy</h3><p>Stomach and large intestine examination with modern endoscopic equipment.</p></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L8 7v6c0 4 4 7 4 7s4-3 4-7V7l-4-5z"/></svg></div><h3>Gastroenterology</h3><p>Specialist care for liver, stomach, pancreas, intestines, hepatitis and digestive disorders.</p></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12a4 4 0 018 0"/></svg></div><h3>Ultrasound</h3><p>Advanced ultrasound imaging by qualified radiologists.</p><span class="tag tag-discount">Rs.500 (50% Off)</span></div>
-<div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v6l-4 8a4 4 0 008 0l-4-8V2M8 2h4"/></svg></div><h3>Laboratory Tests</h3><p>Full range of pathology, biochemistry and microbiology tests on-site.</p><span class="tag tag-discount">50% Off</span></div>
+<div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v6l-4 8a4 4 0 008 0l-4-8V2M8 2h4"/></svg></div><h3>Laboratory Tests</h3><p>Full range of pathology, biochemistry and microbiology tests &mdash; conducted by Zeenat Laboratory.</p><span class="tag tag-discount">50% Off</span></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Digital ECG</h3><p>Digital electrocardiogram for accurate cardiac rhythm and heart health evaluation.</p></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg></div><h3>Frequency Therapy</h3><p>Modern frequency therapy using advanced equipment for chronic pain & wellness.</p><span class="tag tag-new">Modern</span></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg></div><h3>Uric Acid & Anemia</h3><p>Testing and treatment for uric acid, anemia (khoon ki kami) and related conditions.</p></div>
@@ -806,7 +806,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L8 7v6c0 4 4 7 4 7s4-3 4-7V7l-4-5z"/></svg></div><h3>Gastroenterology</h3><p>Liver, stomach, pancreas, intestines, hepatitis and digestive disorders.</p></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg></div><h3>Ultrasound</h3><p>Advanced ultrasound imaging by qualified radiologists.</p><span class="tag tag-discount">Rs.500 (50% Off)</span></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Digital ECG</h3><p>Digital electrocardiogram for accurate heart rhythm evaluation.</p></div>
-<div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v6l-4 8a4 4 0 008 0l-4-8V2"/></svg></div><h3>Laboratory Tests</h3><p>Pathology, biochemistry, microbiology &mdash; complete diagnostic suite.</p><span class="tag tag-discount">50% Off</span></div>
+<div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v6l-4 8a4 4 0 008 0l-4-8V2"/></svg></div><h3>Laboratory Tests</h3><p>Pathology, biochemistry, microbiology &mdash; complete diagnostic suite by Zeenat Laboratory.</p><span class="tag tag-discount">50% Off</span></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6"/></svg></div><h3>Frequency Therapy</h3><p>Modern frequency therapy using advanced equipment.</p><span class="tag tag-new">Modern</span></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11v11h-11z"/></svg></div><h3>On-site Pharmacy</h3><p>Convenient pharmacy facility for all prescribed medicines.</p></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12c0 4 4 7 7 9 3-2 7-5 7-9V6l-7-3-7 3z"/></svg></div><h3>Joint &amp; Chest Pain</h3><p>Assessment and treatment for joint pain and chest discomfort.</p></div>
@@ -841,14 +841,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <div class="doctor-banner"><div class="doctor-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a4 4 0 014-4h8a4 4 0 014 4v2"/></svg></div></div>
 <div class="doctor-info">
 <h3>Dr. Shaheena Shafaq</h3>
-<div class="specialty">Senior General Physician</div>
+<div class="specialty">General Physician</div>
 <div class="specialties-list">
 <span class="spec-chip">BP</span><span class="spec-chip">Sugar</span><span class="spec-chip">Uric Acid</span><span class="spec-chip">Anemia</span><span class="spec-chip">Typhoid</span>
 </div>
 <div class="qualifications">
 <strong>Qualifications</strong>
-<span class="qual-line">Doctor of Internal Medicine</span>
-<span class="qual-line">MBBS, BAMS</span>
+<span class="qual-line">Doctor of Alternative Medicine</span>
+<span class="qual-line">BEMS, MHP</span>
 <span class="qual-line">General Physician &mdash; Years of trusted experience</span>
 </div>
 <div class="timing"><strong>Timing:</strong> Monday &mdash; Saturday<br>12:00 PM &mdash; 6:00 PM</div>
@@ -889,6 +889,23 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <span class="qual-line">Specialist in Hypertension &amp; Diabetes Management</span>
 </div>
 <div class="timing"><strong>Sunday Free Camp:</strong><br>3:00 PM &mdash; 6:00 PM &mdash; Free medicines &amp; tests</div>
+</div>
+</div>
+
+<div class="doctor-card reveal">
+<div class="doctor-banner"><div class="doctor-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a4 4 0 014-4h8a4 4 0 014 4v2"/></svg></div></div>
+<div class="doctor-info">
+<h3>Dr. Amjad</h3>
+<div class="specialty">Ultrasonography Specialist</div>
+<div class="specialties-list">
+<span class="spec-chip">Ultrasound</span><span class="spec-chip">Diagnostic Imaging</span>
+</div>
+<div class="qualifications">
+<strong>Qualifications</strong>
+<span class="qual-line">Specialist in Ultrasonography</span>
+<span class="qual-line">Advanced diagnostic imaging</span>
+</div>
+<div class="timing"><strong>Ultrasound Service</strong><br>Available on appointment &mdash; Rs.500 (50% Off)</div>
 </div>
 </div>
 
@@ -954,6 +971,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <option>Dr. Shaheena Shafaq (General Physician)</option>
 <option>Dr. Ishfaq Ahmed Cheema (Gastroenterologist)</option>
 <option>Dr. Hafiz Muhammad Mahid (BP &amp; Sugar Specialist)</option>
+<option>Dr. Amjad (Ultrasonography)</option>
 </select></div>
 <div class="form-group"><label>Preferred Date</label><input type="date" id="ap-date"></div>
 <div class="form-group"><label>Message <span style="color:var(--text-mute);font-weight:normal">(Optional)</span></label><textarea id="ap-message" placeholder="Briefly describe your problem... (skip if not needed)"></textarea></div>
@@ -1024,6 +1042,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <option>Dr. Shaheena Shafaq (General Physician)</option>
 <option>Dr. Ishfaq Ahmed Cheema (Gastroenterologist)</option>
 <option>Dr. Hafiz Muhammad Mahid (BP &amp; Sugar Specialist)</option>
+<option>Dr. Amjad (Ultrasonography)</option>
 </select>
 <input type="date" id="new-date">
 <textarea class="full" id="new-message" placeholder="Notes / Problem description... (Optional)"></textarea>
