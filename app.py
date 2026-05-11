@@ -196,6 +196,8 @@ FRONTEND_HTML = r'''<!DOCTYPE html>
   --teal:#0d8b8b;--teal-light:#14b8a6;--teal-bg:#e6f7f7;
   --gold:#c9a55c;--gold-light:#e6c98f;
   --red:#dc2626;--red-dark:#991b1b;--red-bg:#fef2f2;
+  --rose:#9f1239;--rose-light:#be123c;--rose-bg:#fff1f2;
+  --emerald-deep:#064e3b;--emerald:#065f46;--emerald-light:#047857;
   --bg:#fafbfc;--bg-alt:#f3f6f9;--white:#fff;
   --text:#0f172a;--text-soft:#475569;--text-mute:#94a3b8;
   --border:#e2e8f0;--border-soft:#eef2f6;
@@ -365,7 +367,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .service-card h3{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--navy);margin-bottom:10px;letter-spacing:-.01em}
 .service-card p{color:var(--text-soft);font-size:.93rem;line-height:1.6}
 .service-card .tag{display:inline-block;margin-top:14px;padding:4px 12px;border-radius:30px;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.tag-discount{background:var(--red-bg);color:var(--red)}
+.tag-discount{background:var(--rose-bg);color:var(--rose);border:1px solid #fecdd3}
 .tag-free{background:#f0fdf4;color:#15803d}
 .tag-new{background:#fef3c7;color:#92400e}
 
@@ -472,14 +474,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .why-box h3{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--navy);margin-bottom:10px}
 .why-box p{color:var(--text-soft);font-size:.92rem;line-height:1.6}
 
-.camp-banner{background:linear-gradient(135deg,var(--red) 0%,var(--red-dark) 100%);color:var(--white);padding:60px 24px;text-align:center;position:relative;overflow:hidden}
+.camp-banner{background:linear-gradient(135deg,var(--emerald-deep) 0%,var(--emerald) 55%,var(--emerald-light) 100%);color:var(--white);padding:60px 24px;text-align:center;position:relative;overflow:hidden}
 .camp-banner::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,transparent,transparent 30px,rgba(255,255,255,.025) 30px,rgba(255,255,255,.025) 60px);pointer-events:none}
 .camp-banner-inner{position:relative;max-width:900px;margin:0 auto}
 .camp-banner .tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);padding:6px 16px;border-radius:30px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
 .camp-banner h2{font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:600;line-height:1.15;margin-bottom:14px;letter-spacing:-.01em}
 .camp-banner p{font-size:1.08rem;margin-bottom:26px;opacity:.95;max-width:600px;margin-left:auto;margin-right:auto}
 .camp-pills{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.camp-pill{background:var(--white);color:var(--red);padding:10px 22px;border-radius:50px;font-weight:700;font-size:.92rem;letter-spacing:.02em;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.camp-pill{background:var(--white);color:var(--emerald-deep);padding:10px 22px;border-radius:50px;font-weight:700;font-size:.92rem;letter-spacing:.02em;box-shadow:0 6px 18px rgba(0,0,0,.18)}
 
 .about-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .about-text h2{font-family:var(--serif);font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:600;color:var(--navy);margin-bottom:20px;line-height:1.15;letter-spacing:-.02em}
@@ -678,6 +680,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .featured-docs{padding:60px 18px}
   .facility-grid{grid-template-columns:1fr;gap:40px}
   .facility-section{padding:60px 18px}
+  .test-grid{grid-template-columns:1fr;gap:18px}
+  .testimonials{padding:60px 18px}
+  .test-quote{min-height:auto}
+  .wa-float{bottom:18px;right:18px}
+  .wa-float-icon{width:54px;height:54px}
 }
 @media(max-width:480px){
   .hero h1{font-size:2rem}
@@ -695,6 +702,33 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 ::-webkit-scrollbar-track{background:var(--bg-alt)}
 ::-webkit-scrollbar-thumb{background:linear-gradient(to bottom,var(--teal),var(--navy));border-radius:5px}
 ::-webkit-scrollbar-thumb:hover{background:var(--navy)}
+
+/* Testimonials section */
+.testimonials{padding:90px 24px;background:linear-gradient(180deg,var(--bg-alt) 0%,var(--white) 100%);position:relative;overflow:hidden}
+.testimonials::before{content:'';position:absolute;top:-150px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,165,92,.08),transparent 60%);border-radius:50%;pointer-events:none}
+.testimonials::after{content:'';position:absolute;bottom:-150px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(13,139,139,.08),transparent 60%);border-radius:50%;pointer-events:none}
+.test-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative}
+.test-card{background:var(--white);border-radius:var(--radius-lg);padding:34px 30px 28px;border:1px solid var(--border-soft);position:relative;transition:all .45s var(--ease);box-shadow:0 4px 20px -8px rgba(10,37,64,.08)}
+.test-card::before{content:'\201C';position:absolute;top:-10px;left:24px;font-family:var(--serif);font-size:5rem;color:var(--teal);line-height:1;opacity:.18;font-weight:700}
+.test-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
+.test-stars{display:flex;gap:3px;margin-bottom:18px;color:var(--gold)}
+.test-quote{color:var(--text);font-size:.96rem;line-height:1.75;margin-bottom:24px;font-style:italic;min-height:120px}
+.test-author{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--border-soft)}
+.test-avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-family:var(--serif);font-weight:600;font-size:1.05rem;flex-shrink:0}
+.test-info strong{display:block;color:var(--navy);font-family:var(--serif);font-weight:600;font-size:1rem;letter-spacing:-.01em}
+.test-info span{color:var(--text-mute);font-size:.82rem;letter-spacing:.02em}
+
+/* Floating WhatsApp button */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:998;display:flex;align-items:center;gap:0;background:linear-gradient(135deg,#25d366 0%,#128c7e 100%);color:var(--white);padding:0;border-radius:50px;text-decoration:none;box-shadow:0 14px 38px -8px rgba(37,211,102,.55),0 6px 18px -4px rgba(0,0,0,.18);transition:all .4s var(--ease);overflow:hidden;font-family:inherit;border:none;cursor:pointer}
+.wa-float::before{content:'';position:absolute;inset:0;border-radius:50px;border:2px solid #25d366;animation:waRing 2.2s ease-out infinite;pointer-events:none}
+.wa-float-icon{width:60px;height:60px;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1}
+.wa-float-label{font-weight:600;font-size:.92rem;letter-spacing:.02em;padding-right:0;max-width:0;opacity:0;overflow:hidden;white-space:nowrap;transition:all .4s var(--ease);position:relative;z-index:1}
+.wa-float:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 44px -8px rgba(37,211,102,.65)}
+.wa-float:hover .wa-float-label{max-width:220px;opacity:1;padding-right:22px}
+@keyframes waRing{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.5);opacity:0}}
+
+/* Animated counter trust-strip */
+.trust-item .num[data-count]{display:inline-block}
 </style>
 </head>
 <body>
@@ -760,10 +794,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div></section>
 
 <section class="trust-strip"><div class="trust-grid">
-<div class="trust-item reveal"><div class="num">1000<span class="plus">+</span></div><div class="lbl">Happy Patients</div></div>
-<div class="trust-item reveal"><div class="num">4</div><div class="lbl">Expert Consultants</div></div>
-<div class="trust-item reveal"><div class="num">50<span class="plus">%</span></div><div class="lbl">Discount on Tests</div></div>
-<div class="trust-item reveal"><div class="num">6</div><div class="lbl">Days a Week</div></div>
+<div class="trust-item reveal"><div class="num" data-count="1000" data-suffix="+"><span class="cnum">1000</span><span class="plus">+</span></div><div class="lbl">Happy Patients</div></div>
+<div class="trust-item reveal"><div class="num" data-count="4"><span class="cnum">4</span></div><div class="lbl">Expert Consultants</div></div>
+<div class="trust-item reveal"><div class="num" data-count="50" data-suffix="%"><span class="cnum">50</span><span class="plus">%</span></div><div class="lbl">Discount on Tests</div></div>
+<div class="trust-item reveal"><div class="num" data-count="6"><span class="cnum">6</span></div><div class="lbl">Days a Week</div></div>
 </div></section>
 
 <section class="featured-docs">
@@ -832,6 +866,62 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 </div>
 </div>
+</div>
+</section>
+
+<section class="testimonials">
+<div class="section-head reveal">
+<span class="eyebrow">What Patients Say</span>
+<h2>Trusted by <em>our community</em></h2>
+<p>Real stories from the patients we&rsquo;ve had the privilege to care for.</p>
+</div>
+<div class="test-grid">
+
+<div class="test-card reveal">
+<div class="test-stars">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+</div>
+<p class="test-quote">Dr. Shaheena ne meri walida ka sugar aur BP itni ehtemam se manage kiya. Staff bhi bahut polite hai aur Saturday free camp ne hamari madad ki. Highly recommended for families.</p>
+<div class="test-author">
+<div class="test-avatar av-teal">AR</div>
+<div class="test-info"><strong>Ahmed Raza</strong><span>Patient&rsquo;s Son &middot; Lahore</span></div>
+</div>
+</div>
+
+<div class="test-card reveal">
+<div class="test-stars">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+</div>
+<p class="test-quote">Endoscopy ka procedure Dr. Ishfaq sahab ne bahut professionally kiya. Modern equipment hai aur poora process comfortable raha. Liver problem ka acha treatment mila yahan.</p>
+<div class="test-author">
+<div class="test-avatar av-navy">FB</div>
+<div class="test-info"><strong>Fatima Bibi</strong><span>Verified Patient &middot; Sharqpur</span></div>
+</div>
+</div>
+
+<div class="test-card reveal">
+<div class="test-stars">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+</div>
+<p class="test-quote">Sunday camp mein Dr. Mahid sahab ne free checkup ke saath medicine bhi di. Ultrasound bhi Rs.500 mein hua &mdash; bahut affordable hai. Allah karim center walon ko jaza de.</p>
+<div class="test-author">
+<div class="test-avatar av-gold">MI</div>
+<div class="test-info"><strong>Muhammad Ilyas</strong><span>Regular Patient &middot; Al-Rehman Gardens</span></div>
+</div>
+</div>
+
 </div>
 </section>
 
@@ -1305,6 +1395,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div><div class="footer-bottom">&copy; 2026 Sharif Medical Center. All Rights Reserved. &middot; Care You Can Trust</div></footer>
 </div>
 
+<a class="wa-float" href="https://wa.me/923204639794?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Sharif%20Medical%20Center." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<span class="wa-float-icon">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</span>
+<span class="wa-float-label">Chat with us</span>
+</a>
+
 <script>
 const API_BASE = window.location.origin + '/api';
 let allAppointments = [];
@@ -1369,6 +1466,32 @@ function initReveals(){
     });
   }, {rootMargin:'-30px 0px', threshold:.05});
   els.forEach(function(el){io.observe(el);});
+
+  // Animated counters
+  const counters = document.querySelectorAll('.page.active [data-count]:not(.counted)');
+  const co = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        const el = en.target;
+        el.classList.add('counted');
+        const target = parseInt(el.getAttribute('data-count'), 10);
+        const span = el.querySelector('.cnum');
+        if(!span){co.unobserve(el);return;}
+        const duration = 1400;
+        const start = performance.now();
+        function tick(now){
+          const p = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          span.textContent = Math.floor(eased * target);
+          if(p < 1) requestAnimationFrame(tick);
+          else span.textContent = target;
+        }
+        requestAnimationFrame(tick);
+        co.unobserve(el);
+      }
+    });
+  }, {threshold:.3});
+  counters.forEach(function(el){co.observe(el);});
 }
 
 window.addEventListener('scroll', function(){
