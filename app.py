@@ -280,6 +280,61 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .hcs-item .num{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--navy);line-height:1}
 .hcs-item .lbl{font-size:.78rem;color:var(--text-mute);margin-top:4px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
 
+/* Hero image (new) */
+.hero-image-wrap{position:relative;border-radius:var(--radius-lg);overflow:visible;animation:slideUp .9s var(--ease) both;min-height:480px}
+.hero-image{width:100%;height:480px;object-fit:cover;border-radius:var(--radius-lg);display:block;box-shadow:0 30px 80px -20px rgba(10,37,64,.35),0 12px 40px -10px rgba(10,37,64,.2)}
+.hero-image-overlay{position:absolute;inset:0;border-radius:var(--radius-lg);background:linear-gradient(135deg,rgba(10,37,64,.15) 0%,transparent 50%,rgba(13,139,139,.18) 100%);pointer-events:none}
+.hero-float{position:absolute;background:var(--white);border-radius:18px;padding:18px 22px;box-shadow:0 20px 50px -15px rgba(10,37,64,.28),0 8px 20px -8px rgba(10,37,64,.15);border:1px solid var(--border-soft);backdrop-filter:blur(12px);animation:floatPulse 4s ease-in-out infinite}
+.hero-float-stats{bottom:30px;left:-30px;display:flex;gap:22px;align-items:center;animation-delay:.5s}
+.hf-row{text-align:left}
+.hf-num{font-family:var(--serif);font-size:1.7rem;font-weight:700;color:var(--navy);line-height:1;letter-spacing:-.02em}
+.hf-num span{color:var(--teal)}
+.hf-lbl{font-size:.7rem;color:var(--text-mute);margin-top:4px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;line-height:1.3}
+.hero-float-discount{top:30px;right:-20px;display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:var(--white);border-color:transparent;animation-delay:1s}
+.hf-discount-icon{width:42px;height:42px;border-radius:12px;background:rgba(201,165,92,.22);display:flex;align-items:center;justify-content:center;color:var(--gold-light);flex-shrink:0}
+.hf-discount-num{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--gold-light);letter-spacing:.01em}
+.hf-discount-sub{font-size:.72rem;color:#cbd5e1;margin-top:2px;letter-spacing:.03em}
+@keyframes floatPulse{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* Featured Doctors strip */
+.featured-docs{padding:80px 24px;background:linear-gradient(180deg,var(--bg-alt) 0%,var(--white) 100%);position:relative;overflow:hidden}
+.featured-docs::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(13,139,139,.06),transparent 60%);border-radius:50%}
+.fd-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.fd-card{background:var(--white);border:1px solid var(--border-soft);border-radius:var(--radius);padding:32px 22px 26px;text-align:center;transition:all .4s var(--ease);cursor:pointer;position:relative;overflow:hidden}
+.fd-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--navy));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.fd-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
+.fd-card:hover::after{transform:scaleX(1)}
+.fd-avatar{width:78px;height:78px;border-radius:50%;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;color:var(--white);font-family:var(--serif);font-size:1.7rem;font-weight:600;letter-spacing:.02em;box-shadow:0 12px 28px -6px rgba(10,37,64,.25);transition:transform .4s var(--ease)}
+.fd-card:hover .fd-avatar{transform:scale(1.08) rotate(-4deg)}
+.fd-avatar.av-teal{background:linear-gradient(135deg,#0d8b8b,#14b8a6)}
+.fd-avatar.av-navy{background:linear-gradient(135deg,#1e3a8a,#0a2540)}
+.fd-avatar.av-gold{background:linear-gradient(135deg,#b8860b,#d97706)}
+.fd-avatar.av-emerald{background:linear-gradient(135deg,#047857,#10b981)}
+.fd-name{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:5px;letter-spacing:-.01em}
+.fd-spec{color:var(--teal);font-size:.82rem;font-weight:600;margin-bottom:10px;letter-spacing:.01em}
+.fd-time{font-size:.78rem;color:var(--text-mute);padding-top:12px;border-top:1px solid var(--border-soft);margin-top:8px}
+
+/* Our Facility section */
+.facility-section{padding:90px 24px;background:var(--white)}
+.facility-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.facility-image-wrap{position:relative;border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:5/4;box-shadow:0 30px 60px -15px rgba(10,37,64,.25)}
+.facility-image-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s var(--ease)}
+.facility-image-wrap:hover img{transform:scale(1.05)}
+.facility-image-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 60%,rgba(10,37,64,.2))}
+.facility-badge{position:absolute;bottom:24px;left:24px;background:var(--white);padding:14px 20px;border-radius:14px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow-md);z-index:2}
+.facility-badge-icon{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--teal-bg),var(--white));color:var(--teal);display:flex;align-items:center;justify-content:center}
+.facility-badge-txt strong{display:block;color:var(--navy);font-family:var(--serif);font-size:1rem;font-weight:600}
+.facility-badge-txt span{color:var(--text-mute);font-size:.78rem;letter-spacing:.02em}
+.facility-content h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-.02em}
+.facility-content h2 em{font-style:italic;color:var(--teal);font-weight:500}
+.facility-content > p{color:var(--text-soft);font-size:1.02rem;margin-bottom:28px;line-height:1.75}
+.facility-features{display:grid;gap:14px}
+.fac-feat{display:flex;gap:14px;align-items:flex-start;padding:14px;background:var(--bg-alt);border-radius:12px;transition:all .3s var(--ease)}
+.fac-feat:hover{background:var(--teal-bg);transform:translateX(6px)}
+.fac-feat-icon{width:38px;height:38px;border-radius:10px;background:var(--white);color:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:var(--shadow-sm)}
+.fac-feat-txt strong{display:block;color:var(--navy);font-weight:600;margin-bottom:3px;font-size:.95rem}
+.fac-feat-txt span{color:var(--text-soft);font-size:.85rem;line-height:1.5}
+
 .trust-strip{background:var(--navy);color:var(--white);padding:50px 24px;position:relative;overflow:hidden}
 .trust-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(800px circle at 80% 50%,rgba(13,139,139,.18),transparent 50%)}
 .trust-grid{position:relative;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
@@ -332,8 +387,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .doctor-banner{height:180px;background:linear-gradient(135deg,var(--navy) 0%,var(--teal) 100%);position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
 .doctor-banner::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 30% 40%,rgba(255,255,255,.12),transparent 50%);pointer-events:none}
 .doctor-banner::after{content:'';position:absolute;top:-50%;right:-30%;width:300px;height:300px;background:radial-gradient(circle,rgba(201,165,92,.2),transparent 60%);border-radius:50%}
-.doctor-avatar{position:absolute;bottom:-44px;width:96px;height:96px;border-radius:50%;background:var(--white);border:4px solid var(--white);box-shadow:var(--shadow-lg);display:flex;align-items:center;justify-content:center;color:var(--navy);z-index:2}
-.doctor-avatar svg{width:50px;height:50px;color:var(--teal)}
+.doctor-avatar{position:absolute;bottom:-44px;width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#0d8b8b,#14b8a6);border:4px solid var(--white);box-shadow:var(--shadow-lg);display:flex;align-items:center;justify-content:center;color:var(--white);z-index:2;font-family:var(--serif);font-size:2.1rem;font-weight:600;letter-spacing:.03em;transition:transform .4s var(--ease)}
+.doctor-card:hover .doctor-avatar{transform:scale(1.05) rotate(-3deg)}
+.doctor-avatar.av-teal{background:linear-gradient(135deg,#0d8b8b,#14b8a6)}
+.doctor-avatar.av-navy{background:linear-gradient(135deg,#1e3a8a,#0a2540)}
+.doctor-avatar.av-gold{background:linear-gradient(135deg,#b8860b,#d97706)}
+.doctor-avatar.av-emerald{background:linear-gradient(135deg,#047857,#10b981)}
 .doctor-info{padding:60px 28px 28px;text-align:center}
 .doctor-info h3{font-family:var(--serif);font-size:1.45rem;font-weight:600;color:var(--navy);margin-bottom:6px;letter-spacing:-.01em}
 .specialty{color:var(--teal);font-weight:600;margin-bottom:18px;font-size:.94rem;letter-spacing:.01em}
@@ -345,6 +404,64 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .timing strong{color:var(--teal)}
 .doctor-card .specialties-list{margin:18px 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .spec-chip{background:var(--bg-alt);color:var(--text);padding:5px 12px;border-radius:30px;font-size:.78rem;font-weight:500;border:1px solid var(--border-soft)}
+
+/* === Hero visual (image) === */
+.hero-visual{position:relative;animation:slideUp .8s var(--ease) .25s both}
+.hero-visual-main{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg);background:linear-gradient(135deg,var(--navy),var(--teal))}
+.hero-visual-main img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1s var(--ease)}
+.hero-visual:hover .hero-visual-main img{transform:scale(1.04)}
+.hero-visual-main::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,37,64,.32) 100%);pointer-events:none}
+.hero-float-card{position:absolute;background:rgba(255,255,255,.97);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);padding:14px 18px;border-radius:14px;box-shadow:0 14px 36px rgba(10,37,64,.18);display:flex;align-items:center;gap:12px;z-index:2;animation:bob 4s ease-in-out infinite;border:1px solid rgba(255,255,255,.6)}
+.hero-float-card.fc-top{top:34px;right:-18px}
+.hero-float-card.fc-bot{bottom:34px;left:-18px;animation-delay:1.6s}
+.hero-float-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--teal),var(--teal-light));color:var(--white);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 6px 14px rgba(13,139,139,.32)}
+.hero-float-icon.fc-gold{background:linear-gradient(135deg,#b8860b,#d97706);box-shadow:0 6px 14px rgba(184,134,11,.32)}
+.hero-float-icon svg{width:22px;height:22px}
+.hero-float-text strong{display:block;color:var(--navy);font-size:.96rem;font-weight:700;line-height:1.1}
+.hero-float-text span{color:var(--text-mute);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+
+/* === Featured Specialists section === */
+.specialists-section{padding:90px 24px;background:var(--bg);position:relative;overflow:hidden}
+.specialists-section::before{content:'';position:absolute;top:0;right:0;width:400px;height:400px;background:radial-gradient(circle,rgba(13,139,139,.08),transparent 70%);border-radius:50%;pointer-events:none}
+.specialists-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1280px;margin:0 auto;position:relative}
+.specialist-mini{background:var(--white);border-radius:var(--radius-lg);padding:36px 22px 28px;text-align:center;border:1px solid var(--border-soft);transition:all .4s var(--ease);position:relative;overflow:hidden}
+.specialist-mini::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--teal),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.specialist-mini:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:var(--teal-bg)}
+.specialist-mini:hover::before{transform:scaleX(1)}
+.specialist-avatar{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--teal));margin:0 auto 18px;display:flex;align-items:center;justify-content:center;color:var(--white);font-family:var(--serif);font-size:1.65rem;font-weight:600;letter-spacing:.03em;box-shadow:0 10px 22px rgba(13,139,139,.3);transition:transform .4s var(--ease)}
+.specialist-mini:hover .specialist-avatar{transform:scale(1.06) rotate(-4deg)}
+.specialist-avatar.av-teal{background:linear-gradient(135deg,#0d8b8b,#14b8a6);box-shadow:0 10px 22px rgba(13,139,139,.32)}
+.specialist-avatar.av-navy{background:linear-gradient(135deg,#1e3a8a,#0a2540);box-shadow:0 10px 22px rgba(10,37,64,.3)}
+.specialist-avatar.av-gold{background:linear-gradient(135deg,#b8860b,#d97706);box-shadow:0 10px 22px rgba(184,134,11,.3)}
+.specialist-avatar.av-emerald{background:linear-gradient(135deg,#047857,#10b981);box-shadow:0 10px 22px rgba(4,120,87,.3)}
+.specialist-mini h4{font-family:var(--serif);font-size:1.12rem;font-weight:600;color:var(--navy);margin-bottom:5px;line-height:1.25;letter-spacing:-.01em}
+.specialist-mini .role{color:var(--teal);font-size:.85rem;font-weight:600;margin-bottom:14px;letter-spacing:.01em}
+.specialist-mini .time-pill{display:inline-block;background:var(--bg-alt);color:var(--text);font-size:.78rem;padding:6px 12px;border-radius:30px;font-weight:500;border:1px solid var(--border-soft)}
+@media (max-width:1024px){.specialists-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.specialists-grid{grid-template-columns:1fr;gap:16px}}
+
+/* === About Preview (image split) === */
+.about-preview{padding:100px 24px;background:var(--white);position:relative}
+.about-preview-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-preview-img{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:5/4;box-shadow:var(--shadow-lg);background:linear-gradient(135deg,var(--navy),var(--teal))}
+.about-preview-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
+.about-preview-img:hover img{transform:scale(1.05)}
+.about-preview-img::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,transparent 40%,rgba(10,37,64,.35) 100%);pointer-events:none}
+.about-float-stat{position:absolute;bottom:22px;left:22px;right:22px;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:18px 22px;border-radius:14px;display:flex;gap:24px;align-items:center;z-index:2;box-shadow:0 14px 36px rgba(10,37,64,.2);border:1px solid rgba(255,255,255,.7)}
+.about-float-stat .stat{flex:1;text-align:center;border-right:1px solid var(--border-soft);padding-right:18px}
+.about-float-stat .stat:last-child{border-right:none;padding-right:0}
+.about-float-stat .stat .n{font-family:var(--serif);font-size:1.5rem;color:var(--navy);font-weight:700;line-height:1;letter-spacing:-.02em}
+.about-float-stat .stat .l{font-size:.74rem;color:var(--text-mute);letter-spacing:.05em;text-transform:uppercase;margin-top:4px;font-weight:600}
+.about-preview-content h2{font-family:var(--serif);font-size:clamp(1.9rem,3.2vw,2.7rem);font-weight:600;color:var(--navy);line-height:1.15;letter-spacing:-.02em;margin-bottom:20px}
+.about-preview-content h2 em{font-style:italic;color:var(--teal);font-weight:500}
+.about-preview-content p.lead{color:var(--text-soft);font-size:1.06rem;margin-bottom:28px;line-height:1.7}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:30px}
+.about-feature{display:flex;gap:12px;align-items:flex-start}
+.about-feature-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--teal-bg),#fff);border:1px solid rgba(13,139,139,.18);color:var(--teal);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.about-feature-icon svg{width:20px;height:20px}
+.about-feature-text strong{color:var(--navy);font-size:.96rem;font-weight:600;display:block;margin-bottom:3px}
+.about-feature-text span{color:var(--text-soft);font-size:.85rem;line-height:1.5}
+@media (max-width:900px){.about-preview-inner{grid-template-columns:1fr;gap:40px}.about-features{grid-template-columns:1fr}}
 
 .why-section{background:var(--bg-alt);padding:90px 24px}
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:1280px;margin:0 auto}
@@ -551,6 +668,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .footer-content{grid-template-columns:1fr;gap:30px}
   .appointment-form,.contact-info{padding:30px 24px}
   .login-box{padding:36px 28px}
+  .hero-image{height:340px}
+  .hero-image-wrap{min-height:auto}
+  .hero-float-stats{bottom:14px;left:14px;right:14px;padding:14px 16px;gap:14px}
+  .hero-float-discount{top:14px;right:14px;padding:12px 14px}
+  .hf-num{font-size:1.4rem}
+  .hf-discount-num{font-size:1rem}
+  .fd-grid{grid-template-columns:repeat(2,1fr);gap:18px}
+  .featured-docs{padding:60px 18px}
+  .facility-grid{grid-template-columns:1fr;gap:40px}
+  .facility-section{padding:60px 18px}
 }
 @media(max-width:480px){
   .hero h1{font-size:2rem}
@@ -559,6 +686,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .btn{padding:12px 22px;font-size:.92rem}
   .hero-cta{flex-direction:column;align-items:stretch}
   .hero-cta .btn{justify-content:center}
+  .fd-grid{grid-template-columns:1fr;gap:16px}
+  .hero-image{height:280px}
+  .facility-features{gap:10px}
 }
 
 ::-webkit-scrollbar{width:10px;height:10px}
@@ -608,26 +738,102 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 </div>
 
-<div class="hero-card">
-<div class="hero-card-decor">50% Off Tests</div>
-<div class="hero-card-badge"></div>
-<h3>Sharif Medical Center</h3>
-<div class="tag">Consultant Care</div>
-<div class="hero-card-stats">
-<div class="hcs-item"><div class="num">3</div><div class="lbl">Specialists</div></div>
-<div class="hcs-item"><div class="num">1000<span style="color:var(--teal)">+</span></div><div class="lbl">Patients</div></div>
-<div class="hcs-item"><div class="num">6</div><div class="lbl">Days Open</div></div>
-<div class="hcs-item"><div class="num">12+</div><div class="lbl">Services</div></div>
+<div class="hero-image-wrap">
+<img class="hero-image" src="https://images.unsplash.com/photo-1612531385446-f7e6d131e1d0?w=900&q=85&auto=format&fit=crop" alt="Medical professional at Sharif Medical Center" loading="eager">
+<div class="hero-image-overlay"></div>
+
+<div class="hero-float hero-float-stats">
+<div class="hf-row"><div class="hf-num">4</div><div class="hf-lbl">Expert<br>Consultants</div></div>
+<div class="hf-row"><div class="hf-num">1000<span>+</span></div><div class="hf-lbl">Patients<br>Treated</div></div>
+</div>
+
+<div class="hero-float hero-float-discount">
+<div class="hf-discount-icon">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+</div>
+<div>
+<div class="hf-discount-num">50% OFF</div>
+<div class="hf-discount-sub">Lab Tests &amp; Ultrasound</div>
+</div>
 </div>
 </div>
 </div></section>
 
 <section class="trust-strip"><div class="trust-grid">
 <div class="trust-item reveal"><div class="num">1000<span class="plus">+</span></div><div class="lbl">Happy Patients</div></div>
-<div class="trust-item reveal"><div class="num">3</div><div class="lbl">Expert Consultants</div></div>
+<div class="trust-item reveal"><div class="num">4</div><div class="lbl">Expert Consultants</div></div>
 <div class="trust-item reveal"><div class="num">50<span class="plus">%</span></div><div class="lbl">Discount on Tests</div></div>
 <div class="trust-item reveal"><div class="num">6</div><div class="lbl">Days a Week</div></div>
 </div></section>
+
+<section class="featured-docs">
+<div class="section-head reveal">
+<span class="eyebrow">Our Specialists</span>
+<h2>Meet our <em>expert consultants</em></h2>
+<p>A team of dedicated specialists with proven track records across general medicine, gastroenterology and diagnostics.</p>
+</div>
+<div class="fd-grid">
+<div class="fd-card reveal" onclick="showPage('doctors')">
+<div class="fd-avatar av-teal">DS</div>
+<div class="fd-name">Dr. Shaheena Shafaq</div>
+<div class="fd-spec">General Physician</div>
+<div class="fd-time">Mon &mdash; Sat &middot; 12 PM &mdash; 6 PM</div>
+</div>
+<div class="fd-card reveal" onclick="showPage('doctors')">
+<div class="fd-avatar av-navy">DI</div>
+<div class="fd-name">Dr. Ishfaq Ahmed Cheema</div>
+<div class="fd-spec">Gastroenterologist</div>
+<div class="fd-time">Daily Night &middot; 8 PM &mdash; 9 PM</div>
+</div>
+<div class="fd-card reveal" onclick="showPage('doctors')">
+<div class="fd-avatar av-gold">DM</div>
+<div class="fd-name">Dr. Hafiz Muhammad Mahid</div>
+<div class="fd-spec">BP &amp; Sugar Specialist</div>
+<div class="fd-time">Sunday &middot; 3 PM &mdash; 6 PM</div>
+</div>
+<div class="fd-card reveal" onclick="showPage('doctors')">
+<div class="fd-avatar av-emerald">DA</div>
+<div class="fd-name">Dr. Amjad</div>
+<div class="fd-spec">Ultrasonography</div>
+<div class="fd-time">On Appointment</div>
+</div>
+</div>
+</section>
+
+<section class="facility-section">
+<div class="facility-grid">
+<div class="facility-image-wrap reveal">
+<img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=85&auto=format&fit=crop" alt="Modern medical facility" loading="lazy">
+<div class="facility-badge">
+<div class="facility-badge-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+<div class="facility-badge-txt"><strong>Trusted Care</strong><span>Since establishment</span></div>
+</div>
+</div>
+<div class="facility-content reveal">
+<span class="eyebrow" style="padding:0 28px 0 0;text-align:left">Our Facility</span>
+<h2>A modern medical center <em>built for your comfort</em></h2>
+<p>Sharif Medical Center brings together qualified specialists, advanced diagnostic equipment and a comfortable patient-first environment &mdash; right at the heart of Sharqpur Road, Lahore.</p>
+<div class="facility-features">
+<div class="fac-feat">
+<div class="fac-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+<div class="fac-feat-txt"><strong>Open Six Days a Week</strong><span>Monday to Saturday, 12 PM &mdash; 6 PM &middot; Endoscopy 8&ndash;9 PM</span></div>
+</div>
+<div class="fac-feat">
+<div class="fac-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg></div>
+<div class="fac-feat-txt"><strong>Qualified Consultants</strong><span>FCPS-certified specialists and registered general physicians</span></div>
+</div>
+<div class="fac-feat">
+<div class="fac-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+<div class="fac-feat-txt"><strong>Modern Diagnostics</strong><span>Digital ECG, Ultrasound, Endoscopy and frequency therapy on-site</span></div>
+</div>
+<div class="fac-feat">
+<div class="fac-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div>
+<div class="fac-feat-txt"><strong>Free Weekly Camps</strong><span>Saturday free checkup &amp; meds &middot; Sunday BP &amp; Sugar free camp</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
 <section class="section">
 <div class="section-head reveal">
@@ -838,7 +1044,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <section class="section"><div class="doctors-grid">
 
 <div class="doctor-card reveal">
-<div class="doctor-banner"><div class="doctor-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a4 4 0 014-4h8a4 4 0 014 4v2"/></svg></div></div>
+<div class="doctor-banner"><div class="doctor-avatar av-teal">DS</div></div>
 <div class="doctor-info">
 <h3>Dr. Shaheena Shafaq</h3>
 <div class="specialty">General Physician</div>
@@ -856,7 +1062,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 
 <div class="doctor-card reveal">
-<div class="doctor-banner"><div class="doctor-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a4 4 0 014-4h8a4 4 0 014 4v2"/></svg></div></div>
+<div class="doctor-banner"><div class="doctor-avatar av-navy">DI</div></div>
 <div class="doctor-info">
 <h3>Dr. Ishfaq Ahmed Cheema</h3>
 <div class="specialty">Gastroenterologist &amp; Hepatologist</div>
@@ -875,7 +1081,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 
 <div class="doctor-card reveal">
-<div class="doctor-banner"><div class="doctor-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a4 4 0 014-4h8a4 4 0 014 4v2"/></svg></div></div>
+<div class="doctor-banner"><div class="doctor-avatar av-gold">DM</div></div>
 <div class="doctor-info">
 <h3>Dr. Hafiz Muhammad Mahid</h3>
 <div class="specialty">Blood Pressure &amp; Sugar Specialist</div>
@@ -893,7 +1099,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 
 <div class="doctor-card reveal">
-<div class="doctor-banner"><div class="doctor-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a4 4 0 014-4h8a4 4 0 014 4v2"/></svg></div></div>
+<div class="doctor-banner"><div class="doctor-avatar av-emerald">DA</div></div>
 <div class="doctor-info">
 <h3>Dr. Amjad</h3>
 <div class="specialty">Ultrasonography Specialist</div>
