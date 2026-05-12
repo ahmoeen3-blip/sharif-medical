@@ -198,6 +198,7 @@ FRONTEND_HTML = r'''<!DOCTYPE html>
   --red:#dc2626;--red-dark:#991b1b;--red-bg:#fef2f2;
   --rose:#9f1239;--rose-light:#be123c;--rose-bg:#fff1f2;
   --emerald-deep:#064e3b;--emerald:#065f46;--emerald-light:#047857;
+  --sea-deep:#0c4a6e;--sea:#0369a1;--sea-light:#0891b2;--sea-glow:#22d3ee;
   --bg:#fafbfc;--bg-alt:#f3f6f9;--white:#fff;
   --text:#0f172a;--text-soft:#475569;--text-mute:#94a3b8;
   --border:#e2e8f0;--border-soft:#eef2f6;
@@ -371,8 +372,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .tag-free{background:#f0fdf4;color:#15803d}
 .tag-new{background:#fef3c7;color:#92400e}
 
-.offers-section{padding:80px 24px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:var(--white);position:relative;overflow:hidden}
-.offers-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(13,139,139,.2),transparent 40%),radial-gradient(circle at 80% 70%,rgba(201,165,92,.15),transparent 40%);pointer-events:none}
+.offers-section{padding:80px 24px;background:linear-gradient(135deg,var(--sea-deep) 0%,var(--sea) 55%,var(--sea-light) 100%);color:var(--white);position:relative;overflow:hidden}
+.offers-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(34,211,238,.22),transparent 45%),radial-gradient(circle at 80% 70%,rgba(201,165,92,.18),transparent 45%),radial-gradient(circle at 50% 100%,rgba(255,255,255,.08),transparent 55%);pointer-events:none}
 .offers-grid{position:relative;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
 .offer-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:18px;padding:28px;transition:all .35s var(--ease);position:relative;overflow:hidden}
 .offer-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.07);border-color:var(--teal-light)}
@@ -386,10 +387,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .doctors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:30px;max-width:1200px;margin:0 auto}
 .doctor-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-soft);transition:all .4s var(--ease);position:relative}
 .doctor-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
-.doctor-banner{height:180px;background:linear-gradient(135deg,var(--navy) 0%,var(--teal) 100%);position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
-.doctor-banner::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 30% 40%,rgba(255,255,255,.12),transparent 50%);pointer-events:none}
-.doctor-banner::after{content:'';position:absolute;top:-50%;right:-30%;width:300px;height:300px;background:radial-gradient(circle,rgba(201,165,92,.2),transparent 60%);border-radius:50%}
-.doctor-avatar{position:absolute;bottom:-44px;width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#0d8b8b,#14b8a6);border:4px solid var(--white);box-shadow:var(--shadow-lg);display:flex;align-items:center;justify-content:center;color:var(--white);z-index:2;font-family:var(--serif);font-size:2.1rem;font-weight:600;letter-spacing:.03em;transition:transform .4s var(--ease)}
+.doctor-banner{height:200px;background:linear-gradient(135deg,var(--navy) 0%,var(--teal) 100%);position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.doctor-banner::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='white' stroke-opacity='.12' stroke-width='.6'><circle cx='20' cy='25' r='8'/><path d='M16 25h8M20 21v8'/><circle cx='75' cy='70' r='6'/><path d='M72 70h6M75 67v6'/><path d='M10 75q5-8 12-3t10 5' /><path d='M65 20q5-5 10 0t8 8'/><circle cx='50' cy='50' r='1.5' fill='white' fill-opacity='.18'/></g></svg>");background-size:240px;background-repeat:repeat;opacity:.9;pointer-events:none}
+.doctor-banner::after{content:'';position:absolute;top:-50%;right:-30%;width:300px;height:300px;background:radial-gradient(circle,rgba(201,165,92,.22),transparent 60%);border-radius:50%}
+.doctor-avatar{position:absolute;bottom:-48px;width:104px;height:104px;border-radius:50%;background:linear-gradient(135deg,#0d8b8b,#14b8a6);border:5px solid var(--white);box-shadow:0 16px 40px -8px rgba(10,37,64,.32),0 6px 16px -4px rgba(10,37,64,.18);display:flex;align-items:center;justify-content:center;color:var(--white);z-index:2;font-family:var(--serif);font-size:2.3rem;font-weight:700;letter-spacing:.03em;transition:transform .5s var(--ease)}
 .doctor-card:hover .doctor-avatar{transform:scale(1.05) rotate(-3deg)}
 .doctor-avatar.av-teal{background:linear-gradient(135deg,#0d8b8b,#14b8a6)}
 .doctor-avatar.av-navy{background:linear-gradient(135deg,#1e3a8a,#0a2540)}
@@ -683,6 +684,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .test-grid{grid-template-columns:1fr;gap:18px}
   .testimonials{padding:60px 18px}
   .test-quote{min-height:auto}
+  .glm-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,180px);gap:12px}
+  .glm-card:nth-child(1){grid-row:1/2;grid-column:1/3}
+  .glimpses{padding:60px 18px}
   .wa-float{bottom:18px;right:18px}
   .wa-float-icon{width:54px;height:54px}
 }
@@ -703,6 +707,18 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 ::-webkit-scrollbar-thumb{background:linear-gradient(to bottom,var(--teal),var(--navy));border-radius:5px}
 ::-webkit-scrollbar-thumb:hover{background:var(--navy)}
 
+/* Gallery / Glimpses section */
+.glimpses{padding:80px 24px;background:var(--white);position:relative}
+.glm-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:240px 240px;gap:18px}
+.glm-card{position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;background:var(--bg-alt);box-shadow:0 12px 30px -10px rgba(10,37,64,.18)}
+.glm-card:nth-child(1){grid-row:1/3}
+.glm-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s var(--ease)}
+.glm-card:hover img{transform:scale(1.08)}
+.glm-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,37,64,.75) 0%,rgba(10,37,64,.15) 50%,transparent 100%);pointer-events:none}
+.glm-label{position:absolute;left:18px;bottom:16px;color:var(--white);font-family:var(--serif);font-weight:600;font-size:1.05rem;letter-spacing:.01em;z-index:2;display:flex;align-items:center;gap:8px}
+.glm-label::before{content:'';width:24px;height:1.5px;background:var(--gold-light);border-radius:1px}
+.glm-card:nth-child(1) .glm-label{font-size:1.3rem}
+
 /* Testimonials section */
 .testimonials{padding:90px 24px;background:linear-gradient(180deg,var(--bg-alt) 0%,var(--white) 100%);position:relative;overflow:hidden}
 .testimonials::before{content:'';position:absolute;top:-150px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,165,92,.08),transparent 60%);border-radius:50%;pointer-events:none}
@@ -712,7 +728,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .test-card::before{content:'\201C';position:absolute;top:-10px;left:24px;font-family:var(--serif);font-size:5rem;color:var(--teal);line-height:1;opacity:.18;font-weight:700}
 .test-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
 .test-stars{display:flex;gap:3px;margin-bottom:18px;color:var(--gold)}
-.test-quote{color:var(--text);font-size:.96rem;line-height:1.75;margin-bottom:24px;font-style:italic;min-height:120px}
+.test-quote{color:var(--text);font-size:1.02rem;line-height:1.65;margin-bottom:24px;font-style:italic;min-height:60px;font-weight:500}
 .test-author{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--border-soft)}
 .test-avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-family:var(--serif);font-weight:600;font-size:1.05rem;flex-shrink:0}
 .test-info strong{display:block;color:var(--navy);font-family:var(--serif);font-weight:600;font-size:1rem;letter-spacing:-.01em}
@@ -885,7 +901,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
 </div>
-<p class="test-quote">Dr. Shaheena ne meri walida ka sugar aur BP itni ehtemam se manage kiya. Staff bhi bahut polite hai aur Saturday free camp ne hamari madad ki. Highly recommended for families.</p>
+<p class="test-quote">Excellent BP &amp; sugar care for my mother. Highly recommended.</p>
 <div class="test-author">
 <div class="test-avatar av-teal">AR</div>
 <div class="test-info"><strong>Ahmed Raza</strong><span>Patient&rsquo;s Son &middot; Lahore</span></div>
@@ -900,7 +916,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
 </div>
-<p class="test-quote">Endoscopy ka procedure Dr. Ishfaq sahab ne bahut professionally kiya. Modern equipment hai aur poora process comfortable raha. Liver problem ka acha treatment mila yahan.</p>
+<p class="test-quote">Modern endoscopy. Professional, comfortable experience.</p>
 <div class="test-author">
 <div class="test-avatar av-navy">FB</div>
 <div class="test-info"><strong>Fatima Bibi</strong><span>Verified Patient &middot; Sharqpur</span></div>
@@ -915,13 +931,43 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
 </div>
-<p class="test-quote">Sunday camp mein Dr. Mahid sahab ne free checkup ke saath medicine bhi di. Ultrasound bhi Rs.500 mein hua &mdash; bahut affordable hai. Allah karim center walon ko jaza de.</p>
+<p class="test-quote">Affordable, caring. The Sunday free camp truly helped.</p>
 <div class="test-author">
 <div class="test-avatar av-gold">MI</div>
 <div class="test-info"><strong>Muhammad Ilyas</strong><span>Regular Patient &middot; Al-Rehman Gardens</span></div>
 </div>
 </div>
 
+</div>
+</section>
+
+<section class="glimpses">
+<div class="section-head reveal">
+<span class="eyebrow">Inside Our Center</span>
+<h2>A glimpse of our <em>healing space</em></h2>
+<p>Modern equipment, comfortable rooms and a calm, professional environment built around patient care.</p>
+</div>
+<div class="glm-grid">
+<div class="glm-card reveal">
+<img src="https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?w=800&q=85&auto=format&fit=crop" alt="Hospital corridor at Sharif Medical Center" loading="lazy">
+<div class="glm-label">Modern Facility</div>
+</div>
+<div class="glm-card reveal">
+<img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&q=85&auto=format&fit=crop" alt="Advanced medical equipment" loading="lazy">
+<div class="glm-label">Diagnostics</div>
+</div>
+<div class="glm-card reveal">
+<img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=85&auto=format&fit=crop" alt="Professional medical consultation" loading="lazy">
+<div class="glm-label">Consultation</div>
+</div>
+<div class="glm-card reveal">
+<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=85&auto=format&fit=crop" alt="Patient care and treatment" loading="lazy">
+<div class="glm-label">Patient Care</div>
+</div>
+<div class="glm-card reveal">
+<img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&q=85&auto=format&fit=crop" alt="Clinic reception and waiting area" loading="lazy">
+<div class="glm-label">Welcoming Space</div>
+</div>
 </div>
 </section>
 
@@ -1395,7 +1441,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div><div class="footer-bottom">&copy; 2026 Sharif Medical Center. All Rights Reserved. &middot; Care You Can Trust</div></footer>
 </div>
 
-<a class="wa-float" href="https://wa.me/923204639794?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Sharif%20Medical%20Center." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<a class="wa-float" href="https://wa.me/923700469037?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Sharif%20Medical%20Center." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
 <span class="wa-float-icon">
 <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </span>
