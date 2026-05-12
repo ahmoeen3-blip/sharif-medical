@@ -387,9 +387,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .doctors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:1200px;margin:0 auto}
 .doctor-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-soft);transition:all .4s var(--ease);position:relative}
 .doctor-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
-.doctor-banner{height:200px;background:linear-gradient(135deg,var(--navy) 0%,var(--teal) 100%);position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
-.doctor-banner::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='white' stroke-opacity='.12' stroke-width='.6'><circle cx='20' cy='25' r='8'/><path d='M16 25h8M20 21v8'/><circle cx='75' cy='70' r='6'/><path d='M72 70h6M75 67v6'/><path d='M10 75q5-8 12-3t10 5' /><path d='M65 20q5-5 10 0t8 8'/><circle cx='50' cy='50' r='1.5' fill='white' fill-opacity='.18'/></g></svg>");background-size:240px;background-repeat:repeat;opacity:.9;pointer-events:none}
-.doctor-banner::after{content:'';position:absolute;top:-50%;right:-30%;width:300px;height:300px;background:radial-gradient(circle,rgba(201,165,92,.22),transparent 60%);border-radius:50%}
+.doctor-banner{height:220px;background:linear-gradient(135deg,var(--navy) 0%,var(--teal) 100%);position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.doctor-banner::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='white' stroke-opacity='.12' stroke-width='.6'><circle cx='20' cy='25' r='8'/><path d='M16 25h8M20 21v8'/><circle cx='75' cy='70' r='6'/><path d='M72 70h6M75 67v6'/><path d='M10 75q5-8 12-3t10 5' /><path d='M65 20q5-5 10 0t8 8'/><circle cx='50' cy='50' r='1.5' fill='white' fill-opacity='.18'/></g></svg>");background-size:240px;background-repeat:repeat;opacity:.35;pointer-events:none}
+.doctor-banner::after{content:'';position:absolute;top:-50%;right:-30%;width:300px;height:300px;background:radial-gradient(circle,rgba(201,165,92,.18),transparent 60%);border-radius:50%;pointer-events:none}
 .doctor-avatar{position:absolute;bottom:-48px;width:104px;height:104px;border-radius:50%;background:linear-gradient(135deg,#0d8b8b,#14b8a6);border:5px solid var(--white);box-shadow:0 16px 40px -8px rgba(10,37,64,.32),0 6px 16px -4px rgba(10,37,64,.18);display:flex;align-items:center;justify-content:center;color:var(--white);z-index:2;font-family:var(--serif);font-size:2.3rem;font-weight:700;letter-spacing:.03em;transition:transform .5s var(--ease)}
 .doctor-card:hover .doctor-avatar{transform:scale(1.05) rotate(-3deg)}
 .doctor-avatar.av-teal{background:linear-gradient(135deg,#0d8b8b,#14b8a6)}
@@ -691,7 +691,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .wa-float-icon{width:54px;height:54px}
   /* Doctor cards mobile-friendly */
   .doctors-grid{grid-template-columns:1fr;gap:22px;max-width:420px}
-  .doctor-banner{height:160px}
+  .doctor-banner{height:180px}
   .doctor-avatar{width:88px;height:88px;font-size:1.85rem;bottom:-40px;border-width:4px}
   .doctor-info{padding:54px 22px 24px}
   .doctor-info h3{font-size:1.3rem}
@@ -1193,7 +1193,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <section class="section"><div class="doctors-grid">
 
 <div class="doctor-card reveal">
-<div class="doctor-banner"><div class="doctor-avatar av-teal">DS</div></div>
+<div class="doctor-banner" style="background-image:linear-gradient(135deg,rgba(10,37,64,.72) 0%,rgba(13,139,139,.62) 100%),url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=700&q=85&auto=format&fit=crop');background-size:cover;background-position:center"><div class="doctor-avatar av-teal">DS</div></div>
 <div class="doctor-info">
 <h3>Dr. Shaheena Shafaq</h3>
 <div class="specialty">General Physician</div>
@@ -1211,7 +1211,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 
 <div class="doctor-card reveal">
-<div class="doctor-banner"><div class="doctor-avatar av-navy">DI</div></div>
+<div class="doctor-banner" style="background-image:linear-gradient(135deg,rgba(30,58,138,.78) 0%,rgba(10,37,64,.72) 100%),url('https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=700&q=85&auto=format&fit=crop');background-size:cover;background-position:center"><div class="doctor-avatar av-navy">DI</div></div>
 <div class="doctor-info">
 <h3>Dr. Ishfaq Ahmed Cheema</h3>
 <div class="specialty">Gastroenterologist &amp; Hepatologist</div>
@@ -1230,7 +1230,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 
 <div class="doctor-card reveal">
-<div class="doctor-banner"><div class="doctor-avatar av-gold">DM</div></div>
+<div class="doctor-banner" style="background-image:linear-gradient(135deg,rgba(120,53,15,.72) 0%,rgba(180,83,9,.58) 100%),url('https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=700&q=85&auto=format&fit=crop');background-size:cover;background-position:center"><div class="doctor-avatar av-gold">DM</div></div>
 <div class="doctor-info">
 <h3>Dr. Hafiz Muhammad Mahid</h3>
 <div class="specialty">Blood Pressure &amp; Sugar Specialist</div>
@@ -1248,7 +1248,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 
 <div class="doctor-card reveal">
-<div class="doctor-banner"><div class="doctor-avatar av-emerald">DA</div></div>
+<div class="doctor-banner" style="background-image:linear-gradient(135deg,rgba(4,120,87,.7) 0%,rgba(6,95,70,.72) 100%),url('https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?w=700&q=85&auto=format&fit=crop');background-size:cover;background-position:center"><div class="doctor-avatar av-emerald">DA</div></div>
 <div class="doctor-info">
 <h3>Dr. Amjad</h3>
 <div class="specialty">Ultrasonography Specialist</div>
