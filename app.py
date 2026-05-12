@@ -384,7 +384,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .offer-card p{font-size:.92rem;color:#cbd5e1;margin-bottom:14px;line-height:1.55}
 .offer-card .offer-meta{font-size:.82rem;color:var(--gold-light);font-weight:600;letter-spacing:.04em;display:flex;align-items:center;gap:6px}
 
-.doctors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:30px;max-width:1200px;margin:0 auto}
+.doctors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:1200px;margin:0 auto}
 .doctor-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-soft);transition:all .4s var(--ease);position:relative}
 .doctor-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
 .doctor-banner{height:200px;background:linear-gradient(135deg,var(--navy) 0%,var(--teal) 100%);position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
@@ -475,14 +475,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .why-box h3{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--navy);margin-bottom:10px}
 .why-box p{color:var(--text-soft);font-size:.92rem;line-height:1.6}
 
-.camp-banner{background:linear-gradient(135deg,var(--emerald-deep) 0%,var(--emerald) 55%,var(--emerald-light) 100%);color:var(--white);padding:60px 24px;text-align:center;position:relative;overflow:hidden}
+.camp-banner{background:linear-gradient(135deg,#451a03 0%,#7c2d12 35%,#b45309 75%,#d97706 100%);color:var(--white);padding:60px 24px;text-align:center;position:relative;overflow:hidden}
 .camp-banner::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,transparent,transparent 30px,rgba(255,255,255,.025) 30px,rgba(255,255,255,.025) 60px);pointer-events:none}
 .camp-banner-inner{position:relative;max-width:900px;margin:0 auto}
 .camp-banner .tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);padding:6px 16px;border-radius:30px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
 .camp-banner h2{font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:600;line-height:1.15;margin-bottom:14px;letter-spacing:-.01em}
 .camp-banner p{font-size:1.08rem;margin-bottom:26px;opacity:.95;max-width:600px;margin-left:auto;margin-right:auto}
 .camp-pills{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.camp-pill{background:var(--white);color:var(--emerald-deep);padding:10px 22px;border-radius:50px;font-weight:700;font-size:.92rem;letter-spacing:.02em;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.camp-pill{background:var(--white);color:#7c2d12;padding:10px 22px;border-radius:50px;font-weight:700;font-size:.92rem;letter-spacing:.02em;box-shadow:0 6px 18px rgba(0,0,0,.18)}
 
 .about-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .about-text h2{font-family:var(--serif);font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:600;color:var(--navy);margin-bottom:20px;line-height:1.15;letter-spacing:-.02em}
@@ -689,6 +689,19 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .glimpses{padding:60px 18px}
   .wa-float{bottom:18px;right:18px}
   .wa-float-icon{width:54px;height:54px}
+  /* Doctor cards mobile-friendly */
+  .doctors-grid{grid-template-columns:1fr;gap:22px;max-width:420px}
+  .doctor-banner{height:160px}
+  .doctor-avatar{width:88px;height:88px;font-size:1.85rem;bottom:-40px;border-width:4px}
+  .doctor-info{padding:54px 22px 24px}
+  .doctor-info h3{font-size:1.3rem}
+  .qualifications{padding:14px;font-size:.86rem}
+  /* Testimonials mobile-friendly */
+  .test-card{padding:30px 22px 22px}
+  .test-card::before{font-size:3.6rem;top:-4px;left:18px}
+  .test-quote{font-size:.96rem;min-height:auto;margin-bottom:18px}
+  .test-author{padding-top:16px;gap:12px}
+  .test-avatar{width:42px;height:42px;font-size:.95rem}
 }
 @media(max-width:480px){
   .hero h1{font-size:2rem}
