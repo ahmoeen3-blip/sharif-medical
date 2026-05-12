@@ -294,6 +294,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .hf-num span{color:var(--teal)}
 .hf-lbl{font-size:.7rem;color:var(--text-mute);margin-top:4px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;line-height:1.3}
 .hero-float-discount{top:30px;right:-20px;display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:var(--white);border-color:transparent;animation-delay:1s}
+
+/* Discount bar below hero image */
+.hero-discount-bar{margin-top:22px;display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,var(--teal) 130%);color:var(--white);padding:16px 22px;border-radius:16px;box-shadow:0 16px 38px -10px rgba(10,37,64,.32),0 6px 16px -6px rgba(10,37,64,.18);animation:slideUp .7s var(--ease) .5s both;position:relative;overflow:hidden}
+.hero-discount-bar::before{content:'';position:absolute;top:-50%;right:-10%;width:180px;height:180px;background:radial-gradient(circle,rgba(201,165,92,.25),transparent 65%);border-radius:50%;pointer-events:none}
+.hero-discount-bar .hf-discount-icon{position:relative;z-index:1;width:46px;height:46px;border-radius:12px;background:rgba(201,165,92,.22);color:var(--gold-light);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.hdb-text{position:relative;z-index:1;flex:1}
+.hdb-num{font-family:var(--serif);font-size:1.35rem;font-weight:700;color:var(--gold-light);letter-spacing:.01em;line-height:1}
+.hdb-sub{font-size:.86rem;color:#cbd5e1;margin-top:4px;letter-spacing:.02em}
 .hf-discount-icon{width:42px;height:42px;border-radius:12px;background:rgba(201,165,92,.22);display:flex;align-items:center;justify-content:center;color:var(--gold-light);flex-shrink:0}
 .hf-discount-num{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--gold-light);letter-spacing:.01em}
 .hf-discount-sub{font-size:.72rem;color:#cbd5e1;margin-top:2px;letter-spacing:.03em}
@@ -677,6 +685,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .hero-float-discount{top:14px;right:14px;padding:12px 14px}
   .hf-num{font-size:1.4rem}
   .hf-discount-num{font-size:1rem}
+  .hero-discount-bar{padding:14px 18px;gap:12px}
+  .hdb-num{font-size:1.15rem}
+  .hdb-sub{font-size:.8rem}
   .fd-grid{grid-template-columns:repeat(2,1fr);gap:18px}
   .featured-docs{padding:60px 18px}
   .facility-grid{grid-template-columns:1fr;gap:40px}
@@ -769,7 +780,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <span>Endoscopy: 8:00 PM &mdash; 9:00 PM</span>
 </div>
 <div class="top-bar-info">
-<span>Call: 0320 4639794 / 0370 0469037</span>
+<span>Call: 0370 0469037</span>
 </div></div></div>
 
 <header class="header"><nav class="navbar">
@@ -809,17 +820,18 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <div class="hf-row"><div class="hf-num">4</div><div class="hf-lbl">Expert<br>Consultants</div></div>
 <div class="hf-row"><div class="hf-num">1000<span>+</span></div><div class="hf-lbl">Patients<br>Treated</div></div>
 </div>
+</div>
 
-<div class="hero-float hero-float-discount">
+<div class="hero-discount-bar">
 <div class="hf-discount-icon">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
 </div>
-<div>
-<div class="hf-discount-num">50% OFF</div>
-<div class="hf-discount-sub">Lab Tests &amp; Ultrasound</div>
+<div class="hdb-text">
+<div class="hdb-num">50% OFF</div>
+<div class="hdb-sub">on Lab Tests &amp; Ultrasound</div>
 </div>
 </div>
-</div>
+
 </div></section>
 
 <section class="trust-strip"><div class="trust-grid">
@@ -992,7 +1004,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 <div class="services-grid">
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h3l3-9 4 18 3-9h7"/></svg></div><h3>Blood Pressure</h3><p>Accurate BP screening, monitoring and long-term management for hypertension patients.</p></div>
-<div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg></div><h3>Diabetes Care</h3><p>Sugar testing, diabetes diagnosis, HbA1c assessment and personalised treatment plans.</p><span class="tag tag-discount">HbA1c 50% Off</span></div>
+<div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg></div><h3>Diabetes Care</h3><p>Sugar testing, diabetes diagnosis, HbA1c assessment and personalised treatment plans.</p></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.5L4 16l4 4 4-4 4 4 4-4-6-6.5V2"/></svg></div><h3>Endoscopy</h3><p>Stomach and large intestine examination with modern endoscopic equipment.</p></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L8 7v6c0 4 4 7 4 7s4-3 4-7V7l-4-5z"/></svg></div><h3>Gastroenterology</h3><p>Specialist care for liver, stomach, pancreas, intestines, hepatitis and digestive disorders.</p></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12a4 4 0 018 0"/></svg></div><h3>Ultrasound</h3><p>Advanced ultrasound imaging by qualified radiologists.</p><span class="tag tag-discount">Rs.500 (50% Off)</span></div>
@@ -1090,7 +1102,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 
 <div class="page" id="about-page">
-<div class="top-bar"><div class="top-bar-content"><div class="top-bar-info"><span><span class="dot"></span>Open Today: 12:00 PM &mdash; 6:00 PM</span><span>Endoscopy: 8:00 PM &mdash; 9:00 PM</span></div><div class="top-bar-info"><span>Call: 0320 4639794 / 0370 0469037</span></div></div></div>
+<div class="top-bar"><div class="top-bar-content"><div class="top-bar-info"><span><span class="dot"></span>Open Today: 12:00 PM &mdash; 6:00 PM</span><span>Endoscopy: 8:00 PM &mdash; 9:00 PM</span></div><div class="top-bar-info"><span>Call: 0370 0469037</span></div></div></div>
 <header class="header"><nav class="navbar"><a class="logo" onclick="showPage('home')"><div class="logo-mark"></div><div class="logo-text">Sharif Medical Center<span>Consultant Care</span></div></a>
 <ul class="nav-menu" id="nm2"><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')" class="active">About</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('doctors')">Doctors</a></li><li><a onclick="showPage('contact')">Contact</a></li><li><a onclick="showPage('admin-login')" class="admin-link">Admin</a></li></ul>
 <button class="menu-toggle" onclick="document.getElementById('nm2').classList.toggle('active')">&#9776;</button></nav></header>
@@ -1134,7 +1146,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 
 <div class="page" id="services-page">
-<div class="top-bar"><div class="top-bar-content"><div class="top-bar-info"><span><span class="dot"></span>Open Today: 12:00 PM &mdash; 6:00 PM</span><span>Endoscopy: 8:00 PM &mdash; 9:00 PM</span></div><div class="top-bar-info"><span>Call: 0320 4639794 / 0370 0469037</span></div></div></div>
+<div class="top-bar"><div class="top-bar-content"><div class="top-bar-info"><span><span class="dot"></span>Open Today: 12:00 PM &mdash; 6:00 PM</span><span>Endoscopy: 8:00 PM &mdash; 9:00 PM</span></div><div class="top-bar-info"><span>Call: 0370 0469037</span></div></div></div>
 <header class="header"><nav class="navbar"><a class="logo" onclick="showPage('home')"><div class="logo-mark"></div><div class="logo-text">Sharif Medical Center<span>Consultant Care</span></div></a>
 <ul class="nav-menu" id="nm3"><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('services')" class="active">Services</a></li><li><a onclick="showPage('doctors')">Doctors</a></li><li><a onclick="showPage('contact')">Contact</a></li><li><a onclick="showPage('admin-login')" class="admin-link">Admin</a></li></ul>
 <button class="menu-toggle" onclick="document.getElementById('nm3').classList.toggle('active')">&#9776;</button></nav></header>
@@ -1153,7 +1165,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 <div class="services-grid">
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h3l3-9 4 18 3-9h7"/></svg></div><h3>Blood Pressure</h3><p>Accurate BP screening, monitoring and long-term hypertension management.</p></div>
-<div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg></div><h3>Sugar (Diabetes)</h3><p>Diabetes screening, HbA1c testing, and personalised treatment.</p><span class="tag tag-discount">HbA1c 50% Off</span></div>
+<div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg></div><h3>Sugar (Diabetes)</h3><p>Diabetes screening, HbA1c testing, and personalised treatment.</p></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Uric Acid</h3><p>Uric acid testing and complete management plans.</p></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9 6 6 9 6 14a6 6 0 0012 0c0-5-3-8-6-12z"/></svg></div><h3>Anemia (Khoon Ki Kami)</h3><p>Comprehensive anemia diagnosis and treatment.</p></div>
 <div class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l3-9 4 18 3-9h5"/></svg></div><h3>Typhoid &amp; Flu</h3><p>Rapid testing and complete treatment for typhoid and seasonal flu.</p></div>
@@ -1179,7 +1191,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 
 <div class="page" id="doctors-page">
-<div class="top-bar"><div class="top-bar-content"><div class="top-bar-info"><span><span class="dot"></span>Open Today: 12:00 PM &mdash; 6:00 PM</span><span>Endoscopy: 8:00 PM &mdash; 9:00 PM</span></div><div class="top-bar-info"><span>Call: 0320 4639794 / 0370 0469037</span></div></div></div>
+<div class="top-bar"><div class="top-bar-content"><div class="top-bar-info"><span><span class="dot"></span>Open Today: 12:00 PM &mdash; 6:00 PM</span><span>Endoscopy: 8:00 PM &mdash; 9:00 PM</span></div><div class="top-bar-info"><span>Call: 0370 0469037</span></div></div></div>
 <header class="header"><nav class="navbar"><a class="logo" onclick="showPage('home')"><div class="logo-mark"></div><div class="logo-text">Sharif Medical Center<span>Consultant Care</span></div></a>
 <ul class="nav-menu" id="nm4"><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('doctors')" class="active">Doctors</a></li><li><a onclick="showPage('contact')">Contact</a></li><li><a onclick="showPage('admin-login')" class="admin-link">Admin</a></li></ul>
 <button class="menu-toggle" onclick="document.getElementById('nm4').classList.toggle('active')">&#9776;</button></nav></header>
@@ -1276,7 +1288,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 </div>
 
 <div class="page" id="contact-page">
-<div class="top-bar"><div class="top-bar-content"><div class="top-bar-info"><span><span class="dot"></span>Open Today: 12:00 PM &mdash; 6:00 PM</span><span>Endoscopy: 8:00 PM &mdash; 9:00 PM</span></div><div class="top-bar-info"><span>Call: 0320 4639794 / 0370 0469037</span></div></div></div>
+<div class="top-bar"><div class="top-bar-content"><div class="top-bar-info"><span><span class="dot"></span>Open Today: 12:00 PM &mdash; 6:00 PM</span><span>Endoscopy: 8:00 PM &mdash; 9:00 PM</span></div><div class="top-bar-info"><span>Call: 0370 0469037</span></div></div></div>
 <header class="header"><nav class="navbar"><a class="logo" onclick="showPage('home')"><div class="logo-mark"></div><div class="logo-text">Sharif Medical Center<span>Consultant Care</span></div></a>
 <ul class="nav-menu" id="nm5"><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('doctors')">Doctors</a></li><li><a onclick="showPage('contact')" class="active">Contact</a></li><li><a onclick="showPage('admin-login')" class="admin-link">Admin</a></li></ul>
 <button class="menu-toggle" onclick="document.getElementById('nm5').classList.toggle('active')">&#9776;</button></nav></header>
@@ -1299,7 +1311,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 
 <div class="contact-item">
 <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-<div><h4>Phone Numbers</h4><p><a href="tel:03700469037">0370 0469037</a><br><a href="tel:03204639794">0320 4639794</a></p></div>
+<div><h4>Phone Numbers</h4><p><a href="tel:03700469037">0370 0469037</a></p></div>
 </div>
 
 <div class="contact-item">
@@ -1413,7 +1425,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <div class="info-grid">
 <div><strong>Center Name:</strong> Sharif Medical Center (Consultant Care)</div>
 <div><strong>Address:</strong> Near Al-Rehman Gardens Phase 2, Opposite Clinix Pharmacy, Sharqpur Road, Lahore</div>
-<div><strong>Phone:</strong> 0320 4639794 / 0370 0469037</div>
+<div><strong>Phone:</strong> 0370 0469037</div>
 <div><strong>Daily Timing:</strong> Mon &mdash; Sat, 12:00 PM &mdash; 6:00 PM</div>
 <div><strong>Endoscopy Timing:</strong> 8:00 PM &mdash; 9:00 PM</div>
 <div><strong>Sunday Camp:</strong> 3:00 PM &mdash; 6:00 PM with Dr. Hafiz Muhammad Mahid</div>
@@ -1447,7 +1459,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <a>Laboratory Tests</a>
 </div>
 <div class="footer-col"><h3>Contact</h3>
-<div class="footer-contact"><span class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span><span>0370 0469037<br>0320 4639794</span></div>
+<div class="footer-contact"><span class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span><span>0370 0469037</span></div>
 <div class="footer-contact"><span class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Sharqpur Road, Lahore</span></div>
 <div class="footer-contact"><span class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span>Mon &mdash; Sat: 12 PM &mdash; 6 PM</span></div>
 </div>
